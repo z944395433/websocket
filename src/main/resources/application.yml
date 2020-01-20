@@ -1,0 +1,12 @@
+server:
+  port: 8099
+spring:
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/
+  datasource:
+    url: jdbc:mysql://139.155.6.250:3306/test?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
