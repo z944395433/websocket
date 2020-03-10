@@ -15,6 +15,8 @@ import java.util.HashMap;
  * @Date 2020/1/2010:24
  **/
 public class JwtUtil {
+
+    //https://www.cnblogs.com/renyutao/articles/11216431.html
     /**
      * 过期时间为一天
      * TODO 正式上线更换为15分钟
@@ -25,6 +27,7 @@ public class JwtUtil {
 
 
     public static String sign(String username,String userId){
+
         //过期时间
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
         //私钥及加密算法
