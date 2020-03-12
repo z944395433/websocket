@@ -10,3 +10,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+  aop:
+    proxy-target-class: true

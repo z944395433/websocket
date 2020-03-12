@@ -3,6 +3,7 @@ package com.example.websocket.util;
 
 
 import org.springframework.util.StringUtils;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,7 @@ import java.io.IOException;
  * @Author YIYS
  * @Date 2020/1/2017:33
  **/
+
 public class Cros implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -49,4 +51,6 @@ public class Cros implements Filter {
     public void destroy() {
 
     }
+
+
 }
