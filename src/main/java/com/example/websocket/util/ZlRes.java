@@ -33,6 +33,10 @@ public class ZlRes<T> {
         return new ZlRes<>("10000",data,null,true);
     }
 
+    public static  <T> ZlRes<T> ok(){
+        return new ZlRes<T>("10000",null,"请求成功",true);
+    }
+
 
     public String getCode() {
         return code;

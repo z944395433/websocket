@@ -19,6 +19,9 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = request.getHeader("token");
+        if (token ==null || "".equals(token) ) {
+            throw  new RuntimeException("401,token解析错误");
+        }
 
         // 如果不是映射到方法直接通过
         if (!(handler instanceof HandlerMethod)) {

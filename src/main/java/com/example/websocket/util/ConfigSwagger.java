@@ -24,7 +24,7 @@ public class ConfigSwagger {
                 .apiInfo(apiInfo())
                 .select()
 //扫描端口
-                .apis(RequestHandlerSelectors.basePackage("com.example.*.controller"))
+                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }
