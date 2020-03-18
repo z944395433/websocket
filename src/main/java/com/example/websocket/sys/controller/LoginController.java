@@ -44,11 +44,13 @@ public class LoginController {
 //            return ZlRes.error("10001","账号密码错误",null);
 //        }
         response.setHeader("token",JwtUtil.sign(userName,passWord));
-        return ZlRes.ok(loginService.login(userName,passWord));
+        return ZlRes.ok(new User());
     }
 
     @GetMapping("test")
-    public ZlRes<Boolean> test(){
+    public ZlRes<Boolean> test( HttpServletRequest request){
+        String token = request.getHeader("token");
+        JwtUtil.verity(token);
         return ZlRes.ok();
     }
 
